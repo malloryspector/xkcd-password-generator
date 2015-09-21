@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+form {
+  padding: 20px;
+}
+.container {
+  margin: 0 auto;
+  width: 60%;
+  overflow: auto;
+  clear: both;
+}
+
+.password {
+  background-color: #ccc;
+  padding: 20px;
+}
