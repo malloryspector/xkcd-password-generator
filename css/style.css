@@ -96,13 +96,12 @@ select.dropdown_long {
   text-align: left;
 }
 
-#footer {
+#header {
   margin: 0 auto;
   width: 500px;
   overflow: auto;
   clear: both;
   text-align: left;
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 

@@ -13,7 +13,11 @@ ini_set("display_errors", 1);
   </head>
 
   <body>
-    <h1>xkcd Style Password Generator</h1>
+    <!-- Header and Applicaiton Info -->
+    <div id="header">
+      <h1>xkcd Style Password Generator</h1>
+      <p>Use this application inspired by the <a href="http://xkcd.com/936/">xkcd password strength comic</a> to generate a random password phrase based on the criteria you choose below! According to the strip, this style of password created with phrases is difficult to guess but easier to remember then generating a string of random numbers and letters.</p>
+    </div>
     <!-- Password Block -->
     <div class="container">
       <div class="password">
@@ -64,10 +68,6 @@ ini_set("display_errors", 1);
         </select>
         <input type="submit" class="button" value="Generate Password">
       </form>
-    </div>
-    <!-- Footer and Applicaiton Info -->
-    <div id="footer">
-      <p>Use this application inspired by the <a href="http://xkcd.com/936/">xkcd password strength comic</a> to generate a random password phrase based on the criteria you choose below! According to the strip, this style of password created with phrases is difficult to guess but easier to remember then generating a string of random numbers and letters.</p>
     </div>
   </body>
 </html>
