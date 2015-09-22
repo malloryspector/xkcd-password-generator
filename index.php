@@ -28,28 +28,28 @@ ini_set("display_errors", 1);
     <!-- Form Block -->
     <div class="container">
       <form method="POST" action="index.php">
+        <!-- Word Count Section -->
         <h3>Word Count</h3>
         <label for="number_of_words">Number of words (Max 9)</label><br>
         <p id="error"><?php echo $errorMessage; ?></p>
         <input type="text" name="number_of_words" class="textfield" maxlength="1" value="<?php if (isset($_POST["number_of_words"])) { echo $_POST["number_of_words"]; } ?>">
-
         <!-- Number Option Section -->
         <h3>Numbers</h3>
-        <input type="checkbox" name="add_number" class="checkbox" <?php if (isset($_POST["add_number"])) { echo "checked='checked'"; } ?> >
+        <input type="checkbox" name="add_number" id="add_number" class="checkbox" <?php if (isset($_POST["add_number"])) { echo "checked='checked'"; } ?> >
         <label for="add_number">Add a number</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <select name="additional_numbers" class="dropdown">
+        <select name="additional_numbers" id="additional_numbers" class="dropdown">
           <option value="1" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 1) { echo "selected='true'"; } ?>>1</option>
           <option value="2" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 2) { echo "selected='true'"; } ?>>2</option>
-          <option value"3" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 3) { echo "selected='true'"; } ?>>3</option>
+          <option value="3" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 3) { echo "selected='true'"; } ?>>3</option>
           <option value="4" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 4) { echo "selected='true'"; } ?>>4</option>
           <option value="5" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 5) { echo "selected='true'"; } ?>>5</option>
         </select>
         <label for="additional_numbers">number(s) total</label><br>
         <!-- Symbol Option Section -->
         <h3>Symbols</h3>
-        <input type="checkbox" name="add_symbol" class="checkbox" <?php if (isset($_POST["add_symbol"])) { echo "checked='checked'"; } ?> >
+        <input type="checkbox" name="add_symbol" id="add_symbol" class="checkbox" <?php if (isset($_POST["add_symbol"])) { echo "checked='checked'"; } ?> >
         <label for="add_symbol">Add a symbol</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <select name="additional_symbols" class="dropdown">
+        <select name="additional_symbols" id="additional_symbols" class="dropdown">
           <option value="1" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 1) { echo "selected='true'"; } ?>>1</option>
           <option value="2" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 2) { echo "selected='true'"; } ?>>2</option>
           <option value="3" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 3) { echo "selected='true'"; } ?>>3</option>
@@ -60,12 +60,13 @@ ini_set("display_errors", 1);
         <!-- Separator Section -->
         <h3>Separator</h3>
         <label for="separator">Choose your separator</label>
-        <select name="separator" class="dropdown_long">
+        <select name="separator" id="separator" class="dropdown_long">
           <option value="1" <?php if (isset($_POST["separator"]) && $_POST["separator"] == 1) { echo "selected='true'"; } ?>>hyphen</option>
           <option value="2" <?php if (isset($_POST["separator"]) && $_POST["separator"] == 2) { echo "selected='true'"; } ?>>space</option>
           <option value="3" <?php if (isset($_POST["separator"]) && $_POST["separator"] == 3) { echo "selected='true'"; } ?>>no space</option>
           <option value="4" <?php if (isset($_POST["separator"]) && $_POST["separator"] == 4) { echo "selected='true'"; } ?>>dot</option>
         </select>
+        <!-- Generate Password -->
         <input type="submit" class="button" value="Generate Password">
       </form>
     </div>
