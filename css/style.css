@@ -1,19 +1,91 @@
 body {
   font-family: sans-serif;
   text-align: center;
+  line-height: 22px;
+  background-color: rgb(232,235,243);
+  color: rgb(35,37,44);
 }
 
 form {
   padding: 20px;
 }
+
+p {
+  font-size: 14px;
+  margin: 0px;
+}
+
+h2 {
+  line-height: 30px;
+}
+
+h3 {
+  margin: 0px;
+  font-size: 16px;
+}
+
+label {
+  font-size: 14px;
+}
+
+input.textfield {
+  width: 450px;
+  height: 36px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(232,235,243);
+  border-style: none;
+  padding-left: 10px;
+  overflow: auto;
+}
+
+input.button {
+  width: 460px;
+  height: 36px;
+  background-color: rgb(62,124,221);
+  color: #ffffff;
+  border-style: none;
+  padding-left: 10px;
+  font-size: 20px;
+  overflow: auto;
+}
+
+input.checkbox {
+  background-color: rgb(62,124,221);
+  border-style: none;
+  overflow: auto;
+}
+
+select.dropdown {
+  width: 60px;
+  height: 36px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(232,235,243);
+  border-style: none;
+  padding-left: 10px;
+  overflow: auto;
+}
+
 .container {
   margin: 0 auto;
-  width: 60%;
+  width: 500px;
   overflow: auto;
   clear: both;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.divider {
+  padding: 10px;
 }
 
 .password {
-  background-color: #ccc;
+  color: rgb(62,124,221);
   padding: 20px;
+  text-align: center;
+}
+
+#error {
+  color: red;
 }

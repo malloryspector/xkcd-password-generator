@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);       # Report Errors, Warnings, and Notices
-ini_set("display_errors", 1); # Display errors on page (instead of a log file)
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 ?>
 
 <!DOCTYPE html>
@@ -13,36 +13,47 @@ ini_set("display_errors", 1); # Display errors on page (instead of a log file)
   </head>
 
   <body>
+    <h1>xkcd Style Password Generator</h1>
+    <!-- Password Block -->
     <div class="container">
-      <h1>xkcd Style Password Generator</h1>
-
       <div class="password">
-        <?php echo $password; ?>
+        <h2><?php echo $password; ?></h2>
       </div>
-
+    </div>
+    <div class="divider"></div>
+    <!-- Form Block -->
+    <div class="container">
       <form method="POST" action="index.php">
-
-        <input type="text" name="number_of_words" maxlength="1" value="<?php if (isset($_POST["number_of_words"])) { echo $_POST["number_of_words"]; } ?>">
+        <h3>Word Count</h3>
         <label for="number_of_words">Number of words (Max 9)</label><br>
-        <input type="checkbox" name="add_number" <?php if (isset($_POST["add_number"])) { echo "checked='checked'"; } ?> >
-        <label for="add_number">Add a number</label>
-        <select name="additional_numbers">
+        <p id="error"><?php echo $errorMessage; ?></p>
+        <input type="text" name="number_of_words" class="textfield" maxlength="1" value="<?php if (isset($_POST["number_of_words"])) { echo $_POST["number_of_words"]; } ?>">
+
+        <!-- Number Option Section -->
+        <h3>Numbers</h3>
+        <input type="checkbox" name="add_number" class="checkbox" <?php if (isset($_POST["add_number"])) { echo "checked='checked'"; } ?> >
+        <label for="add_number">Add a number</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="additional_numbers" class="dropdown">
           <option value="1" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 1) { echo "selected='true'"; } ?>>1</option>
           <option value="2" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 2) { echo "selected='true'"; } ?>>2</option>
-          <option value="3" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 3) { echo "selected='true'"; } ?>>3</option>
+          <option value"3" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 3) { echo "selected='true'"; } ?>>3</option>
           <option value="4" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 4) { echo "selected='true'"; } ?>>4</option>
           <option value="5" <?php if (isset($_POST["additional_numbers"]) && $_POST["additional_numbers"] == 5) { echo "selected='true'"; } ?>>5</option>
-        </select><br>
-        <input type="checkbox" name="add_symbol" <?php if (isset($_POST["add_symbol"])) { echo "checked='checked'"; } ?> >
-        <label for="add_symbol">Add a symbol</label>
-        <select name="additional_symbols">
+        </select>
+        <label for="additional_numbers">number(s) total</label><br>
+        <!-- Symbol Option Section -->
+        <h3>Symbols</h3>
+        <input type="checkbox" name="add_symbol" class="checkbox" <?php if (isset($_POST["add_symbol"])) { echo "checked='checked'"; } ?> >
+        <label for="add_symbol">Add a symbol</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="additional_symbols" class="dropdown">
           <option value="1" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 1) { echo "selected='true'"; } ?>>1</option>
           <option value="2" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 2) { echo "selected='true'"; } ?>>2</option>
           <option value="3" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 3) { echo "selected='true'"; } ?>>3</option>
           <option value="4" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 4) { echo "selected='true'"; } ?>>4</option>
           <option value="5" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 5) { echo "selected='true'"; } ?>>5</option>
-        </select><br>
-        <input type="submit" value="Generate My Password!">
+        </select>
+        <label for="additional_symbols">symbol(s) total</label><br>
+        <input type="submit" class="button" value="Generate Password!">
 
       </form>
     </div>

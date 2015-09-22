@@ -5,19 +5,17 @@ $words = array("notice", "yarn", "want", "second", "cat", "impolite", "pump", "p
 // Create an array of random symbols
 $symbols = array("!", "@", "#", "$", "%", "?", "&", "*");
 
-/*
-$err_message = "";
-//error message
+// Validation
+$errorMessage = "";
 if (isset($_POST["number_of_words"])) {
   if (!is_numeric($_POST["number_of_words"])) {
-    $err_message = "Please enter a valid number";
+    $errorMessage = "Please enter a valid number to generate a password";
     $password = "";
     return false;
   } else {
-    $err_message = "";
+    $errorMessage = "";
   }
 }
-*/
 
 // Default word total
 $word_total = 4;
