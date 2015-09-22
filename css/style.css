@@ -76,6 +76,17 @@ select.dropdown {
   overflow: auto;
 }
 
+select.dropdown_long {
+  width: 100px;
+  height: 36px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(232,235,243);
+  border-style: none;
+  padding-left: 10px;
+  overflow: auto;
+}
+
 .container {
   margin: 0 auto;
   width: 500px;
@@ -85,12 +96,13 @@ select.dropdown {
   text-align: left;
 }
 
-#header {
+#footer {
   margin: 0 auto;
   width: 500px;
   overflow: auto;
   clear: both;
   text-align: left;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 

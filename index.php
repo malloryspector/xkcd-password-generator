@@ -13,10 +13,7 @@ ini_set("display_errors", 1);
   </head>
 
   <body>
-    <div id="header">
-      <h1>xkcd Style Password Generator</h1>
-      <p>Use this application inspired by the <a href="http://xkcd.com/936/">xkcd password strength comic</a> to generate a random password phrase based on the criteria you choose below! According to the strip, this style of password created with phrases is difficult to guess but easier to remember then generating a string of random numbers and letters.</p>
-    </div>
+    <h1>xkcd Style Password Generator</h1>
     <!-- Password Block -->
     <div class="container">
       <div class="password">
@@ -56,9 +53,21 @@ ini_set("display_errors", 1);
           <option value="5" <?php if (isset($_POST["additional_symbols"]) && $_POST["additional_symbols"] == 5) { echo "selected='true'"; } ?>>5</option>
         </select>
         <label for="additional_symbols">symbol(s) total</label><br>
-        <input type="submit" class="button" value="Generate Password!">
-
+        <!-- Separator Section -->
+        <h3>Separator</h3>
+        <label for="separator">Choose your separator</label>
+        <select name="separator" class="dropdown_long">
+          <option value="1" <?php if (isset($_POST["separator"]) && $_POST["separator"] == 1) { echo "selected='true'"; } ?>>hyphen</option>
+          <option value="2" <?php if (isset($_POST["separator"]) && $_POST["separator"] == 2) { echo "selected='true'"; } ?>>space</option>
+          <option value="3" <?php if (isset($_POST["separator"]) && $_POST["separator"] == 3) { echo "selected='true'"; } ?>>no space</option>
+          <option value="4" <?php if (isset($_POST["separator"]) && $_POST["separator"] == 4) { echo "selected='true'"; } ?>>dot</option>
+        </select>
+        <input type="submit" class="button" value="Generate Password">
       </form>
+    </div>
+    <!-- Footer and Applicaiton Info -->
+    <div id="footer">
+      <p>Use this application inspired by the <a href="http://xkcd.com/936/">xkcd password strength comic</a> to generate a random password phrase based on the criteria you choose below! According to the strip, this style of password created with phrases is difficult to guess but easier to remember then generating a string of random numbers and letters.</p>
     </div>
   </body>
 </html>

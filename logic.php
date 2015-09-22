@@ -73,4 +73,16 @@ if (isset($_POST["add_symbol"])) {
 /*
 Join array elements with "-" string to get final password
 */
-$password = implode("-", $password_words);
+$separator = "-";
+
+if (isset($_POST["separator"]) && $_POST["separator"] == 1) {
+  $separator = "-";
+} elseif (isset($_POST["separator"]) && $_POST["separator"] == 2) {
+  $separator = " ";
+} elseif (isset($_POST["separator"]) && $_POST["separator"] == 3) {
+  $separator = "";
+} elseif (isset($_POST["separator"]) && $_POST["separator"] == 4) {
+  $separator = ".";
+}
+
+$password = implode($separator, $password_words);
