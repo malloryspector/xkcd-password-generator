@@ -8,7 +8,7 @@ $symbols = array("!", "@", "#", "$", "%", "?", "&", "*");
 // Validation
 $errorMessage = "";
 if (isset($_POST["number_of_words"])) {
-  if (!is_numeric($_POST["number_of_words"])) {
+  if (!is_numeric($_POST["number_of_words"]) && $_POST["number_of_words"] != "") {
     $errorMessage = "Please enter a valid number to generate a password";
     $password = "";
     return false;
