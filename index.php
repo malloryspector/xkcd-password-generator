@@ -32,7 +32,7 @@ ini_set("display_errors", 1);
         <h3>Word Count</h3>
         <label for="number_of_words">Number of words (Max 9)</label><br>
         <p id="error"><?php echo $errorMessage; ?></p>
-        <input type="text" name="number_of_words" class="textfield" maxlength="1" value="<?php if (isset($_POST["number_of_words"])) { echo $_POST["number_of_words"]; } ?>">
+        <input type="text" name="number_of_words" id="number_of_words" class="textfield" maxlength="1" value="<?php if (isset($_POST["number_of_words"])) { echo $_POST["number_of_words"]; } ?>">
         <!-- Number Option Section -->
         <h3>Numbers</h3>
         <input type="checkbox" name="add_number" id="add_number" class="checkbox" <?php if (isset($_POST["add_number"])) { echo "checked='checked'"; } ?> >

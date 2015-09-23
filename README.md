@@ -7,7 +7,7 @@
 A simple password generator application inspired by the [xkcd style password comic](http://xkcd.com/936/).
 
 ## Demo
-Coming soon
+<http://screencast.com/t/TBiy9vhl>
 
 ## Details for teaching team
 * Covers required goals of how many words to use, and whether to use a number and/or a symbol.
@@ -15,4 +15,4 @@ Coming soon
 * Error validation included for how many words to use field. Error message is thrown if field is not entered with a number and no password is generated.
 
 ## Outside code
-No outside code or libraries were used for this project.
+Word list is a hard coded array of words not scraped from any site. No outside code or libraries were used for this project.
